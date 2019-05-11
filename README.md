@@ -34,20 +34,12 @@ Este projeto terá as seguintes funcionalidades:
 <!-- Apresentar restrições de funcionalidades e de escopo. -->
 ### 3. Restrições
 
-É interessante, mas não obrigatório, que o sistema faça o casamento entre intensões de compra e ofertas de venda, para automatizar os negócios. O sistema em si não efetua a venda, apenas realiza a oferta (compra e venda) e deixa que os usuários realizem a negociação por fora.
+* O sistema não faz o casamento entre intensões de compra e ofertas de venda, para automatizar os negócios.
+* O sistema em si não efetua a venda, apenas realiza a oferta (compra e venda) e deixa que os usuários realizem a negociação por fora.
 
 <!-- Construir alguns protótipos para a aplicação, disponibilizá-los no Github e descrever o que foi considerado. //-->
 ### 4. Protótipo
-Protótipos para as páginas que foram elaboradas, e podem ser encontrados em https://github.com/UFOP-CSI477/2019-01-trabalho-final-guilherme-philipe/tree/master/Prototipos.
-
-* Página principal
-* Página de cadastro de clientes
-* Página de cadastro de parceiros
-* Tela para cálculo da distância e custo benefício
-* Tela para análise custo benefício<!-- Esse Protótipo é necessário ??? -->
-* Página para cadastro veicular
-
-
+Protótipos para as páginas que foram elaboradas, e podem ser encontrados em https://github.com/UFOP-CSI477/2019-01-trabalho-final-arthur-marlon
 
 ### 5. Referências
-Pindyck,R. S.; Rubinfeld, D. L. Microeconomia. 7 ed. São Paulo: Pearson Education do Brasil, 2010.
+
