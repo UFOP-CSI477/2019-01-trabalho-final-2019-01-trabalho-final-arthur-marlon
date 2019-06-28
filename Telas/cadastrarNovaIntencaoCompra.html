@@ -1,40 +1,59 @@
 <!DOCTYPE html>
 <html lang="br" dir="ltr">
   <head>
+
+
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+  
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
     <title>Nova intenção de compra</title>
   </head>
   <body>
-    <h1>Nova intenção de compra</h1>
+
+    <h1 class="cover-heading">Nova intenção de compra</h1>
     <br>
     <br>
     <br>
-    <form method="post">
-      <label for="codigo">Código:</label>
-      <input type="text" name="codigo">
+    <div class="lead">
+
+
+      <form method="post">
+          <label for="codigo">Código:</label>
+          <input type="text" name="codigo">
+          <br>
+          <label for="linha">Linha:</label>
+          <input type="text" name="linha">
+          <br>
+          <label for="valor">Valor:</label>
+          <input type="text" name="valor">
+          <br>
+          <label for="estado">Estado:</label>
+          <input type="text" name="estado">
+          <br>
+          <label for="negociavel">Negociável:</label>
+          <input type="text" name="negociavel">
+          <br>
+          <label for="data">Data:</label>
+          <input type="text" name="data">
+          <br>
+          <br>
+      </div>
+
+      <button type="button" name="inserir" class="btn btn-lg btn-light">Inserir</button>
+      <button type="button" name="cancelar" class="btn btn-lg btn-light">Cancelar</button>
+
       <br>
-      <label for="linha">Linha:</label>
-      <input type="text" name="linha">
-      <br>
-      <label for="valor">Valor:</label>
-      <input type="text" name="valor">
-      <br>
-      <label for="estado">Estado:</label>
-      <input type="text" name="estado">
-      <br>
-      <label for="negociavel">Negociável:</label>
-      <input type="text" name="negociavel">
-      <br>
-      <label for="data">Data:</label>
-      <input type="text" name="data">
       <br>
 
-      <button type="button" name="inserir">Inserir</button>
-      <button type="button" name="cancelar">Cancelar</button>
-
-      <br>
-
-      <a href="/">Voltar</a>
+      <a href="/" class="btn btn-lg btn-light">Voltar</a>
 
     </form>
   </body>
