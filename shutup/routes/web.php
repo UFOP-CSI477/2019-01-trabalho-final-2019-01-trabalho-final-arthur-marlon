@@ -14,3 +14,18 @@
 Route::get('/', function () {
     return view('home');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('/users', 'UserController');
+
+Route::resource('/colecionaveis', 'ColecionavelController');
+
+Route::resource('/compras', 'CompraController');
+
+Route::resource('/ofertas', 'OfertaController');
+
+Route::resource('/posses', 'PosseController');
+

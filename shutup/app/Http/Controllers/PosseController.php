@@ -14,7 +14,9 @@ class PosseController extends Controller
      */
     public function index()
     {
-        //
+        $posses = Posse::all();
+
+        return view('posses.index')->with('posses', $posses);
     }
 
     /**
@@ -24,7 +26,7 @@ class PosseController extends Controller
      */
     public function create()
     {
-        //
+        return view('posses.create');
     }
 
     /**
@@ -35,7 +37,11 @@ class PosseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Posse::create($request->all());
+
+        session()->flash('mensagem', 'Posse Inserido com sucesso!');
+
+        return redirect()->route('posses.index');
     }
 
     /**
@@ -46,7 +52,7 @@ class PosseController extends Controller
      */
     public function show(Posse $posse)
     {
-        //
+        return view('posses.show')->with('posse', $posse);
     }
 
     /**
@@ -57,7 +63,7 @@ class PosseController extends Controller
      */
     public function edit(Posse $posse)
     {
-        //
+        return view('posses.edit')->with('posse', $posse);
     }
 
     /**
@@ -69,17 +75,26 @@ class PosseController extends Controller
      */
     public function update(Request $request, Posse $posse)
     {
-        //
+        $posse->fill($request->all());
+        $posse->save();
+
+        session()->flash('mensagem', 'Posse Atualizada com sucesso!');
+
+        return redirect()->route('posses.show', $posse->id);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Posse  $posse
+     * @param \App\Posse $posse
      * @return \Illuminate\Http\Response
+     * @throws \Exception
      */
     public function destroy(Posse $posse)
     {
-        //
+        $posse->delete();
+        session()->flash('mensagem', 'Posse excluida com sucesso!');
+
+        return redirect()->route('posses.index');
     }
 }
