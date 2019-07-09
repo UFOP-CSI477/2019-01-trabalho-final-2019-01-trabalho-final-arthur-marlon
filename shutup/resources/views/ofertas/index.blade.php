@@ -25,7 +25,6 @@
                         <th>Cor dos Olhos</th>
                         <th>Cor das Vestimentas</th>
                         <th>Visualizar</th>
-                        <th>Excluir</th>
 
                     </tr>
                     </thead>
@@ -45,15 +44,6 @@
                             <td>{{$e->colecionavel->cor_olhos}}</td>
                             <td>{{$e->colecionavel->cor_vestimentas}}</td>
                             <td><a class="btn  btn-sm btn-primary" href="{{route('ofertas.show', $e->id)}}">Visualizar</a></td>
-                            <td>
-                                <form method="post" action="{{route('ofertas.destroy', $e->id)}}"
-                                      onsubmit="return confirm('Deseja realmente excluir?');">
-                                    @csrf
-                                    @method('DELETE')
-
-                                    <input class="btn btn-primary" type="submit" value="Excluir">
-                                </form>
-                            </td>
                         </tr>
                     @endforeach
                     </tbody>

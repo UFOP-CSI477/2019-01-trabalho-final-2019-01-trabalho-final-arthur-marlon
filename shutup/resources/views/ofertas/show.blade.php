@@ -31,21 +31,24 @@
 
             </div>
 
-            <div class="col">
+            @if(\Illuminate\Support\Facades\Auth::user()->id == 1 || $oferta->user_id == \Illuminate\Support\Facades\Auth::user()->id)
+                <div class="col">
 
-                <a class="btn btn-sm btn-primary" href="{{route('users.edit', $oferta->id)}}">Editar</a>
+                    <a class="btn btn-sm btn-primary" href="{{route('users.edit', $oferta->id)}}">Editar</a>
 
-            </div>
+                </div>
 
-            <div class="col">
+                <div class="col">
 
-                <form method="post" action="{{route('users.destroy', $oferta->id)}}"
-                      onsubmit="return confirm('Deseja realmente excluir?');">
-                    @csrf
-                    @method('DELETE')
-                    <input class="btn  btn-sm btn-primary" type="submit" value="Excluir">
-                </form>
-            </div>
+                    <form method="post" action="{{route('users.destroy', $oferta->id)}}"
+                          onsubmit="return confirm('Deseja realmente excluir?');">
+                        @csrf
+                        @method('DELETE')
+                        <input class="btn  btn-sm btn-primary" type="submit" value="Excluir">
+                    </form>
+                </div>
+            @endif
+
         </div>
     </div>
 

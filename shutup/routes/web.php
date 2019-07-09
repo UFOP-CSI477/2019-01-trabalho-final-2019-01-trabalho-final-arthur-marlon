@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/adm', function () {
-    return view('adm');
-})->name('adm')->middleware('auth');
+Route::get('/adm', 'AdmController@index')->name('adm')->middleware('auth');
 
 Auth::routes();
 
@@ -33,3 +31,7 @@ Route::resource('/ofertas', 'OfertaController')->middleware('auth');
 
 Route::resource('/posses', 'PosseController')->middleware('auth');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

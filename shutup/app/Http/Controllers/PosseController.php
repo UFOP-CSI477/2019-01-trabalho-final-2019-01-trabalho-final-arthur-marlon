@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Posse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PosseController extends Controller
 {
@@ -14,7 +15,10 @@ class PosseController extends Controller
      */
     public function index()
     {
-        $posses = Posse::all();
+        if (Auth::user()->tipo == 1)
+            $posses = Posse::all();
+        else
+            $posses = Posse::all()->where('user_id', Auth::user()->id);
 
         return view('posses.index')->with('posses', $posses);
     }

@@ -13,7 +13,7 @@ class UserController extends Controller
      */
     public function index(){
 
-        $users = User::all();
+        $users = User::all()->sortBy('id');
 
         return view('users.index')->with('users', $users);
     }
@@ -56,7 +56,7 @@ class UserController extends Controller
 
         session()->flash('mensagem', 'Usuario Atualizado com sucesso!');
 
-        return redirect()->route('users.show', $user->id);
+        return redirect()->route('users.index', $user->id);
     }
 
     /**
