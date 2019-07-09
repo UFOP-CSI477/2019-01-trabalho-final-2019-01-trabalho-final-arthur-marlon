@@ -86,13 +86,14 @@ class PosseController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param \App\Posse $posse
+     * @param Posse $poss
      * @return \Illuminate\Http\Response
      * @throws \Exception
      */
-    public function destroy(Posse $posse)
+    public function destroy(Posse $poss)
     {
-        $posse->delete();
+
+        $poss->delete();
         session()->flash('mensagem', 'Posse excluida com sucesso!');
 
         return redirect()->route('posses.index');

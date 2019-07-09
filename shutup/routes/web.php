@@ -15,17 +15,21 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/adm', function () {
+    return view('adm');
+})->name('adm')->middleware('auth');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('/users', 'UserController');
+Route::resource('/users', 'UserController')->middleware('auth');
 
-Route::resource('/colecionaveis', 'ColecionavelController');
+Route::resource('/colecionaveis', 'ColecionavelController')->middleware('auth');
 
 Route::resource('/compras', 'CompraController');
 
-Route::resource('/ofertas', 'OfertaController');
+Route::resource('/ofertas', 'OfertaController')->middleware('auth');
 
-Route::resource('/posses', 'PosseController');
+Route::resource('/posses', 'PosseController')->middleware('auth');
 

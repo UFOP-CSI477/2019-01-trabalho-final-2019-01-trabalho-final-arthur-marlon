@@ -59,6 +59,11 @@ class UserController extends Controller
         return redirect()->route('users.show', $user->id);
     }
 
+    /**
+     * @param User $user
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Exception
+     */
     public function destroy(User $user){
 
         $user->delete();

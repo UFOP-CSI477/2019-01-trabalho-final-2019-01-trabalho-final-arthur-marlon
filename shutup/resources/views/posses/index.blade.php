@@ -29,6 +29,7 @@
             <tbody>
             @foreach($posses as $e)
                 <tr>
+
                     <td>{{$e->colecionavel->nome}}</td>
                     <td>{{$e->colecionavel->linha}}</td>
                     <td>{{$e->valor}}</td>
